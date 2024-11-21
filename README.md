@@ -9,7 +9,7 @@ This project involves developing an ETL (Extract, Transform, Load) pipeline usin
 ### Data Extraction:
 - **Spotify API**: Retrieve music data, including track details, artist information, and albums, using the Spotify API.
 - **Authentication**: Implement OAuth 2.0 for secure access to the Spotify API.
-- **Scheduling**: Use Amazon CloudWatch to trigger the pipeline on a daily basis to automatically extract the latest data.
+- **Scheduling**: Use Amazon CloudWatch to trigger the pipeline on a daily basis to automatically extract the latest data using Cron syntax
 
 ### Data Transformation:
 - **Data Cleaning**: Cleanse the raw data by handling missing values, duplicates, and inconsistencies.
@@ -23,7 +23,7 @@ This project involves developing an ETL (Extract, Transform, Load) pipeline usin
 - **Data Partitioning**: Organize data into partitions based on attributes like date or category to optimize query performance.
 
 ## Workflow
-1. **Extract**: The pipeline periodically calls the Spotify API to fetch the latest music data.
+1. **Extract**: The pipeline periodically calls the Spotify API to fetch the latest music data from the Top Songs in Japan playlist.
 2. **Transform**: The raw data is cleaned, formatted, and enriched to meet the analysis requirements.
 3. **Load**: The processed data is uploaded to AWS S3 and stored in partitioned formats. AWS Glue is used for schema inference and table creation, while AWS Athena is used for SQL-based analytics.
 
